@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фасадный декор — АКРОТЕРА</title>
+<meta name="description" content="Архитектурный фасадный декор из пенополистирола: карнизы, наличники, откосы, пилястры, колонны, молдинги. Каталог профилей с ценами, изготовление по проекту.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* ─── СТИЛИ ТОЛЬКО ДЛЯ ЭТОЙ СТРАНИЦЫ ─── */
+.page-content { padding-top: 96px; }
+
+/* HERO СЕКЦИЯ ДЕКОРА */
+.fd-hero {
+  background: var(--concrete-dark);
+  color: var(--stone-paper);
+  padding: 80px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.fd-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(115deg, rgba(232,226,214,0.03) 0, rgba(232,226,214,0.03) 1px, transparent 1px, transparent 14px),
+    radial-gradient(circle at 80% 20%, rgba(181,86,47,0.15), transparent 55%);
+  pointer-events: none;
+}
+.fd-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding-bottom: 72px;
+}
+.fd-hero-text .eyebrow { color: var(--clay); margin-bottom: 20px; }
+.fd-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 600;
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+.fd-hero-title em { font-style: italic; font-weight: 500; color: var(--stone-light); }
+.fd-hero-lead {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--lime-grey);
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+.fd-hero-img {
+  position: relative;
+}
+.fd-hero-img img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+}
+.fd-img-caption {
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  background: rgba(14,13,12,0.72);
+  backdrop-filter: blur(6px);
+  padding: 12px 18px;
+  font-size: 12px;
+  color: var(--lime-grey);
+  letter-spacing: 0.04em;
+}
+
+/* ПРЕИМУЩЕСТВА */
+.fd-benefits {
+  background: var(--stone-light);
+  padding: 72px 0;
+}
+.fd-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.fd-benefit {
+  border-top: 2px solid var(--clay);
+  padding-top: 20px;
+}
+.fd-benefit-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.fd-benefit h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.fd-benefit p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(14,13,12,0.65);
+}
+
+/* ГАЛЕРЕЯ ОБЪЕКТОВ */
+.fd-gallery { padding: 80px 0; background: var(--stone-paper); }
+.fd-gallery-head { margin-bottom: 40px; }
+.fd-gallery-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.fd-gallery-head p {
+  font-size: 16px;
+  color: rgba(14,13,12,0.65);
+  max-width: 560px;
+}
+.fd-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.fd-gallery-item {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  background: var(--stone-light);
+}
+.fd-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s var(--ease);
+}
+.fd-gallery-item:hover img { transform: scale(1.04); }
+
+/* РАЗДЕЛИТЕЛЬ */
+.fd-divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+/* УСТРОЙСТВО ПРОФИЛЯ */
+.fd-profile {
+  background: var(--stone-light);
+  padding: 64px 0;
+}
+.fd-profile-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.fd-profile-img img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.14);
+}
+.fd-profile-text h2 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 600;
+  line-height: 1.18;
+  margin: 12px 0 16px;
+}
+.fd-profile-text p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(14,13,12,0.7);
+}
+
+/* КАТАЛОГ ТОВАРОВ ДЕКОРА */
+.fd-catalog {
+  background: var(--stone-paper);
+  padding: 80px 0 100px;
+}
+.fd-catalog-head {
+  margin-bottom: 36px;
+}
+.fd-catalog-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.fd-catalog-head p {
+  font-size: 15px;
+  color: rgba(14,13,12,0.6);
+  max-width: 600px;
+}
+.fd-filter-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 28px;
+}
+.fd-filter-tab {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: rgba(14,13,12,0.65);
+  background: transparent;
+  cursor: pointer;
+  transition: all .2s var(--ease);
+}
+.fd-filter-tab:hover { border-color: var(--clay); color: var(--clay-dark); }
+.fd-filter-tab.is-active {
+  background: var(--concrete-darker);
+  border-color: var(--concrete-darker);
+  color: var(--stone-paper);
+}
+.fd-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.fd-card-item {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  background: #fff;
+  cursor: pointer;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  display: block;
+}
+.fd-card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+}
+.fd-card-item img {
+  width: 100%;
+  display: block;
+}
+.fd-catalog-cta {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.fd-catalog-cta p {
+  font-size: 14px;
+  color: rgba(14,13,12,0.6);
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Лайтбокс для увеличенного просмотра карточки */
+.fd-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(14,13,12,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 300;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s, visibility .25s;
+}
+.fd-lightbox-overlay.is-open { opacity: 1; visibility: visible; }
+.fd-lightbox-overlay img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+}
+.fd-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  background: none;
+  border: none;
+}
+
+/* CTA БЛОК */
+.fd-cta {
+  background: var(--clay);
+  color: var(--stone-paper);
+  padding: 72px 0;
+  text-align: center;
+}
+.fd-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.fd-cta p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fd-cta .btn-primary {
+  background: var(--concrete-darker);
+}
+.fd-cta .btn-primary:hover { background: #000; }
+
+/* АДАПТИВ */
+@media (max-width: 900px) {
+  .fd-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .fd-benefits-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .fd-profile-inner { grid-template-columns: 1fr; gap: 32px; }
+  .fd-gallery-grid { grid-template-columns: 1fr 1fr; }
+  .fd-cards-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+@media (max-width: 560px) {
+  .fd-benefits-grid { grid-template-columns: 1fr; }
+  .fd-gallery-grid { grid-template-columns: 1fr; }
+  .fd-cards-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .fd-catalog-cta { flex-direction: column; align-items: stretch; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="36" height="36"><path d="M6 32 L20 6 L34 32 Z M11 32 L29 32" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-text">АКРОТЕРА</span>
+    </a>
+        <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+      <a href="vases.html">Вазоны, МАФ и скульптуры</a>
+      <a href="sfb.html">СФБ</a>
+      <a href="thermopanels.html" style="color:var(--clay)">Термопанели и декор</a>
+      <a href="fireplaces.html">Камины</a>
+      <a href="index.html">Главная</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+79607127444" class="header-phone">+7 960 712-74-44</a>
+      <button class="btn btn-primary btn-sm" id="openOrderBtn">Заказать расчёт</button>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="fd-hero">
+  <div class="container fd-hero-inner">
+    <div class="fd-hero-text">
+      <p class="eyebrow">Дополнительная продукция</p>
+      <h1 class="fd-hero-title">Архитектурный<br>фасадный декор<br><em>из пенополистирола</em></h1>
+      <p class="fd-hero-lead">Позволяет коттеджу, дому, усадьбе получить индивидуальность и придать внешнему виду здания исключительный характер. Красота и прочность натурального камня при значительно меньшем весе.</p>
+      <button class="btn btn-primary" id="openOrderBtn2">Получить консультацию</button>
+    </div>
+    <div class="fd-hero-img">
+      <img src="images/decor/window-app-6.jpg" alt="Окно с фасадным декором — наличники и карниз">
+      <div class="fd-img-caption">Карниз и наличник из пенополистирола в применении</div>
+    </div>
+  </div>
+</section>
+
+<!-- УСТРОЙСТВО ПРОФИЛЯ -->
+<section class="fd-profile">
+  <div class="container fd-profile-inner">
+    <div class="fd-profile-img">
+      <img src="images/decor/foam-profile-detail.jpg" alt="Устройство профиля декора">
+    </div>
+    <div class="fd-profile-text">
+      <p class="eyebrow eyebrow-dark">Устройство материала</p>
+      <h2>Пенопласт высокой плотности + защитное покрытие</h2>
+      <p>Внутри — пенопласт высокой плотности, который держит форму и обеспечивает лёгкость конструкции. Снаружи — прочное защитное покрытие, устойчивое к влаге, перепадам температур и механическим воздействиям, имитирующее фактуру натурального камня.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="fd-benefits">
+  <div class="container">
+    <div class="fd-benefits-grid">
+      <div class="fd-benefit">
+        <div class="fd-benefit-icon">🏛</div>
+        <h3>Как натуральный камень</h3>
+        <p>Внешняя фактура неотличима от камня — без необходимости периодического ремонта.</p>
+      </div>
+      <div class="fd-benefit">
+        <div class="fd-benefit-icon">⚡</div>
+        <h3>Монтаж в любой сезон</h3>
+        <p>Простота и удобство монтажа, проводимого в любое время года на любых фасадах.</p>
+      </div>
+      <div class="fd-benefit">
+        <div class="fd-benefit-icon">⚖️</div>
+        <h3>Небольшой вес</h3>
+        <p>Значительно легче натурального камня — нет нагрузки на несущие конструкции.</p>
+      </div>
+      <div class="fd-benefit">
+        <div class="fd-benefit-icon">✏️</div>
+        <h3>Любой проект</h3>
+        <p>Карнизы, наличники, пилястры, молдинги — воплощаем любые архитектурные идеи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ГАЛЕРЕЯ ОБЪЕКТОВ -->
+<section class="fd-gallery">
+  <div class="container">
+    <div class="fd-gallery-head">
+      <p class="eyebrow eyebrow-dark">Реализованные объекты</p>
+      <h2>Фасадный декор в деле</h2>
+      <p>Фасадный декор в ряду материалов, реализующих архитектурные задумки владельцев и архитекторов, занимает место лидера по ряду параметров.</p>
+    </div>
+    <div class="fd-gallery-grid">
+      <a href="images/decor/window-app-1.jpg" target="_blank" class="fd-gallery-item">
+        <img src="images/decor/window-app-1.jpg" alt="Окно с наличником и подоконником" loading="lazy">
+      </a>
+      <a href="images/decor/window-app-2.jpg" target="_blank" class="fd-gallery-item">
+        <img src="images/decor/window-app-2.jpg" alt="Окно с замковым камнем" loading="lazy">
+      </a>
+      <a href="images/decor/window-app-3.jpg" target="_blank" class="fd-gallery-item">
+        <img src="images/decor/window-app-3.jpg" alt="Окно с наличником" loading="lazy">
+      </a>
+      <a href="images/decor/window-app-4.jpg" target="_blank" class="fd-gallery-item">
+        <img src="images/decor/window-app-4.jpg" alt="Окно с рустованными пилястрами" loading="lazy">
+      </a>
+      <a href="images/decor/window-app-5.jpg" target="_blank" class="fd-gallery-item">
+        <img src="images/decor/window-app-5.jpg" alt="Окно с классическим обрамлением" loading="lazy">
+      </a>
+      <a href="images/decor/window-app-8.jpg" target="_blank" class="fd-gallery-item">
+        <img src="images/decor/window-app-8.jpg" alt="Окно с венчающим карнизом" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="fd-divider">
+
+<!-- КАТАЛОГ ТОВАРОВ -->
+<section class="fd-catalog" id="catalog">
+  <div class="container">
+    <div class="fd-catalog-head">
+      <p class="eyebrow eyebrow-dark">Каталог профилей</p>
+      <h2>Карнизы и наличники</h2>
+      <p>Карточки изготовителя с точными размерами и ценами за погонный метр — без покрытия и с защитным покрытием. Карнизы, наличники, откосы, подоконники, замковые камни, филёнки, пилястры, колонны, углы, русты, арки, молдинги и комплекты лепнины — изготавливаем по проекту заказчика.</p>
+    </div>
+
+    <div class="fd-filter-tabs" id="fdFilterTabs" role="tablist"></div>
+
+    <div class="fd-cards-grid" id="fdCardsGrid"></div>
+
+    <div class="fd-catalog-cta">
+      <p>Нужен профиль, которого нет в каталоге, или комплект под конкретный проект? Пришлите эскиз или фото фасада — рассчитаем индивидуально.</p>
+      <button class="btn btn-primary" id="openOrderBtn3">Запросить расчёт</button>
+    </div>
+  </div>
+</section>
+
+<!-- ЛАЙТБОКС -->
+<div class="fd-lightbox-overlay" id="fdLightbox">
+  <button class="fd-lightbox-close" id="fdLightboxClose" aria-label="Закрыть">&times;</button>
+  <img src="" alt="" id="fdLightboxImg">
+</div>
+
+<!-- CTA -->
+<section class="fd-cta">
+  <div class="container">
+    <h2>Нужна консультация по декору?</h2>
+    <p>Пришлите фото фасада или эскиз — рассчитаем стоимость комплекта и сроки изготовления.</p>
+    <button class="btn btn-primary btn-lg" id="openOrderBtn4">Отправить заявку</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="logo-text">АКРОТЕРА</span>
+      <p>Архитектурный бетон по технологии «Систром-бетон»</p>
+    </div>
+    <div class="footer-col">
+      <h4>Разделы</h4>
+      <a href="index.html">Главная</a>
+      <a href="index.html#catalog">Каталог</a>
+      <a href="facade.html">Фасадный декор</a>
+      <a href="index.html#material">О материале</a>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <a href="tel:+79607127444">+7 960 712-74-44</a>
+      <a href="mailto:89106475555@mail.ru">89106475555@mail.ru</a>
+      <p>Производство: г. Тверь, Октябрьский пр-т, 105</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 АКРОТЕРА</span>
+    <span>Фасадный декор из пенополистирола</span>
+  </div>
+</footer>
+
+<!-- МОДАЛКА ЗАЯВКИ (общая) -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">&times;</button>
+    <h3 id="modalTitle">Отправить проект на расчёт</h3>
+    <p class="modal-sub">Опишите задачу — ответим с расчётом стоимости и сроков.</p>
+    <form id="orderForm" novalidate>
+      <label class="field">
+        <span>Имя</span>
+        <input type="text" name="name" required placeholder="Как к вам обращаться">
+      </label>
+      <label class="field">
+        <span>Телефон или e-mail</span>
+        <input type="text" name="contact" required placeholder="+7 ... или email@example.com">
+      </label>
+      <label class="field">
+        <span>Что нужно</span>
+        <textarea name="message" rows="4" placeholder="Карниз, наличник, артикул или описание проекта..."></textarea>
+      </label>
+      <label class="checkbox-field">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен на обработку персональных данных</span>
+      </label>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Отправить заявку</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // Модалка
+  const overlay = document.getElementById('modalOverlay');
+  const closeBtn = document.getElementById('modalClose');
+  const form = document.getElementById('orderForm');
+  const status = document.getElementById('formStatus');
+
+  function openModal() {
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  ['openOrderBtn','openOrderBtn2','openOrderBtn3','openOrderBtn4'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener('click', openModal);
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      status.textContent = 'Заполните обязательные поля.';
+      status.className = 'form-status is-error';
+      return;
+    }
+    status.textContent = 'Заявка отправлена! Свяжемся с вами в ближайшее время.';
+    status.className = 'form-status is-success';
+    form.reset();
+    setTimeout(closeModal, 1800);
+  });
+
+  // Мобильное меню
+  const burger = document.getElementById('burgerBtn');
+  const nav = document.getElementById('mainNav');
+  burger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // ───── КАТАЛОГ ДЕКОРА ─────
+  let DECOR_PRODUCTS = [];
+  let activeType = 'all';
+
+  const typeTitles = {
+    'all': 'Все',
+    'cornice-top': 'Карниз венчающий',
+    'cornice-mid': 'Карниз межэтажный',
+    'cornice-bottom': 'Карниз нижний',
+    'nalichnik': 'Наличник',
+  };
+
+  async function loadDecorCatalog() {
+    try {
+      const res = await fetch('data/decor_products.json');
+      DECOR_PRODUCTS = await res.json();
+    } catch (err) {
+      console.error('Не удалось загрузить каталог декора:', err);
+      DECOR_PRODUCTS = [];
+    }
+    renderFilterTabs();
+    renderCards();
+  }
+
+  function renderFilterTabs() {
+    const types = ['all', ...new Set(DECOR_PRODUCTS.map(p => p.type))];
+    const tabsEl = document.getElementById('fdFilterTabs');
+    tabsEl.innerHTML = '';
+    types.forEach(type => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'fd-filter-tab' + (type === activeType ? ' is-active' : '');
+      btn.textContent = typeTitles[type] || type;
+      btn.addEventListener('click', () => {
+        activeType = type;
+        document.querySelectorAll('.fd-filter-tab').forEach(t => t.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        renderCards();
+      });
+      tabsEl.appendChild(btn);
+    });
+  }
+
+  function renderCards() {
+    const grid = document.getElementById('fdCardsGrid');
+    grid.innerHTML = '';
+    const filtered = activeType === 'all'
+      ? DECOR_PRODUCTS
+      : DECOR_PRODUCTS.filter(p => p.type === activeType);
+
+    filtered.forEach(p => {
+      const item = document.createElement('button');
+      item.type = 'button';
+      item.className = 'fd-card-item';
+      item.innerHTML = `<img src="${p.images[0]}" alt="${p.name}" loading="lazy">`;
+      item.addEventListener('click', () => openLightbox(p.images[0], p.name));
+      grid.appendChild(item);
+    });
+  }
+
+  function openLightbox(src, alt) {
+    const lb = document.getElementById('fdLightbox');
+    document.getElementById('fdLightboxImg').src = src;
+    document.getElementById('fdLightboxImg').alt = alt;
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('fdLightbox').classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('fdLightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('fdLightbox').addEventListener('click', e => {
+    if (e.target.id === 'fdLightbox') closeLightbox();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  loadDecorCatalog();
+})();
+</script>
+</body>
+</html>

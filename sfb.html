@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Изделия из СФБ — АКРОТЕРА</title>
+<meta name="description" content="Изделия из стеклофибробетона (СФБ) — балюстрады, колонны, декоративные фасадные элементы. Сертифицировано. Реализованные объекты по всей России.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/category-page.css">
+<style>
+:root {
+  --clay: #B5562F;
+  --dark: #1a1a18;
+  --paper: #f5f3ee;
+  --line: #e8e5df;
+  --mid: #666;
+}
+
+/* ── HERO ── */
+.sfb-hero {
+  background: var(--dark);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.sfb-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+}
+.sfb-hero-img {
+  position: relative;
+  overflow: hidden;
+}
+.sfb-hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.sfb-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px;
+  color: #fff;
+}
+.sfb-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 20px;
+}
+.sfb-hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.sfb-hero-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 40px;
+  max-width: 440px;
+}
+.sfb-hero-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 8px;
+}
+.sfb-hero-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.sfb-hero-nav a:hover { color: #fff; }
+.sfb-hero-nav a span { font-size: 1.1rem; opacity: 0.5; }
+
+/* ── INTRO ── */
+.sfb-intro {
+  background: #fff;
+  padding: 100px 0 80px;
+  text-align: center;
+}
+.sfb-intro h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  max-width: 640px;
+  margin: 0 auto 24px;
+  line-height: 1.15;
+}
+.sfb-intro p {
+  color: var(--mid);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+/* ── PROJECTS GRID ── */
+.sfb-projects {
+  background: var(--paper);
+  padding: 80px 0;
+}
+.sfb-projects .section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 16px;
+  display: block;
+}
+.sfb-projects h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.sfb-projects .sub {
+  color: var(--mid);
+  margin-bottom: 48px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 560px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.proj-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--line);
+}
+.proj-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+.proj-card:hover img { transform: scale(1.05); }
+
+/* ── 6 REASONS ── */
+.sfb-reasons {
+  background: #fff;
+  padding: 100px 0;
+}
+.sfb-reasons h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.reason {
+  background: #fff;
+  padding: 40px 36px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.reason-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  color: var(--clay);
+}
+.reason-icon svg { width: 44px; height: 44px; }
+.reason h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.reason p {
+  font-size: 0.875rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+/* ── CERTS ── */
+.sfb-certs {
+  background: var(--paper);
+  padding: 100px 0;
+}
+.sfb-certs .head {
+  margin-bottom: 56px;
+}
+.sfb-certs .head span {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--clay); display: block; margin-bottom: 14px;
+}
+.sfb-certs .head h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.sfb-certs .head p { color: var(--mid); font-size: 0.95rem; line-height: 1.6; max-width: 520px; }
+.certs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.cert-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  cursor: pointer;
+  transition: box-shadow 0.25s, transform 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.cert-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  transform: translateY(-2px);
+}
+.cert-img {
+  background: #f0ede8;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  overflow: hidden;
+}
+.cert-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+.cert-body { padding: 28px 32px 32px; }
+.cert-tag {
+  display: inline-block;
+  background: #e8f4e8;
+  color: #2a6e2a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.cert-body h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
+.cert-body p { font-size: 0.855rem; color: var(--mid); line-height: 1.55; }
+.cert-num { font-size: 0.78rem; color: #aaa; margin-top: 10px; }
+
+/* ── CTA FORM ── */
+.sfb-cta {
+  background: var(--dark);
+  padding: 100px 0;
+  color: #fff;
+}
+.sfb-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.sfb-cta-left h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.sfb-cta-left p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.sfb-form { display: flex; flex-direction: column; gap: 14px; }
+.sfb-form input,
+.sfb-form textarea,
+.sfb-form select {
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.92rem;
+  color: #fff;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.sfb-form input::placeholder,
+.sfb-form textarea::placeholder { color: rgba(255,255,255,0.35); }
+.sfb-form input:focus,
+.sfb-form textarea:focus { border-color: var(--clay); }
+.sfb-form textarea { resize: vertical; min-height: 100px; }
+.sfb-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.sfb-form .checkbox-label {
+  display: flex; gap: 10px; align-items: flex-start;
+  color: rgba(255,255,255,0.45); font-size: 0.8rem; line-height: 1.5; cursor: pointer;
+}
+.sfb-form .checkbox-label input[type=checkbox] { margin-top: 2px; flex-shrink: 0; }
+.sfb-form-status { font-size: 0.85rem; color: #4caf50; margin-top: 4px; min-height: 20px; }
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.93);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 6px; }
+.lightbox-close {
+  position: absolute; top: 20px; right: 24px;
+  background: none; border: none; color: #fff;
+  font-size: 2.6rem; cursor: pointer; opacity: 0.6; transition: opacity 0.2s; line-height: 1;
+}
+.lightbox-close:hover { opacity: 1; }
+
+/* ── FOOTER ── */
+.site-footer { background: #111; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .sfb-hero-inner { grid-template-columns: 1fr; min-height: auto; }
+  .sfb-hero-img { height: 50vw; }
+  .sfb-hero-text { padding: 48px 32px; }
+  .reasons-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+  .proj-card:first-child { grid-column: span 2; }
+  .sfb-cta-inner { grid-template-columns: 1fr; gap: 48px; }
+  .certs-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .reasons-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .proj-card:first-child { grid-column: span 1; }
+  .sfb-form .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="36" height="36"><path d="M6 32 L20 6 L34 32 Z M11 32 L29 32" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-text">АКРОТЕРА</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Навигация">
+      <a href="vases.html">Вазоны, МАФ и скульптуры</a>
+      <a href="sfb.html" style="color:var(--clay)">СФБ</a>
+      <a href="thermopanels.html">Термопанели и декор</a>
+      <a href="fireplaces.html">Камины</a>
+      <a href="index.html">Главная</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+79607127444" class="header-phone">+7 960 712-74-44</a>
+      <button class="btn btn-primary btn-sm" id="openOrderBtn">Заказать расчёт</button>
+      <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO: фото слева + текст справа -->
+<section class="sfb-hero">
+  <div class="sfb-hero-inner">
+    <div class="sfb-hero-img">
+      <img src="images/sfb/object-6.jpg" alt="Реализованный объект из СФБ">
+    </div>
+    <div class="sfb-hero-text">
+      <p class="sfb-eyebrow">Стеклофибробетон (СФБ)</p>
+      <h1>Фасадный декор из СФБ для любого типа зданий</h1>
+      <p class="sfb-hero-lead">Балюстрады, колонны, карнизы и декоративные элементы — в 2–3 раза легче железобетона, класс НГ (негорючий), сертифицировано по ГОСТ.</p>
+      <div style="margin-bottom: 40px;">
+        <button class="btn btn-primary" onclick="document.getElementById('sfb-form-section').scrollIntoView({behavior:'smooth'})">Запросить расчёт</button>
+      </div>
+      <nav class="sfb-hero-nav">
+        <a href="#projects">Реализованные объекты <span>→</span></a>
+        <a href="#reasons">Преимущества материала <span>→</span></a>
+        <a href="#certs">Сертификаты <span>→</span></a>
+        <a href="#sfb-form-section">Связаться с нами <span>→</span></a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="sfb-intro">
+  <div class="container">
+    <h2>Изделия из СФБ для любого типа зданий</h2>
+    <p>Производим фасадные декоративные и облицовочные элементы из стеклофибробетона серийно и по индивидуальному проекту. Лёгкость монтажа, долговечность и полная свобода форм делают СФБ универсальным решением для жилых, общественных и культурных объектов.</p>
+    <button class="btn btn-primary" onclick="document.getElementById('sfb-form-section').scrollIntoView({behavior:'smooth'})">Связаться с нами</button>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sfb-projects" id="projects">
+  <div class="container">
+    <span class="section-label">Реализованные объекты</span>
+    <h2>Наши работы</h2>
+    <p class="sub">Жилые дома, административные здания, храмы, вокзалы — СФБ работает на объектах любого масштаба по всей России.</p>
+    <div class="projects-grid">
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-1.jpg')">
+        <img src="images/sfb/object-1.jpg" alt="Объект 1" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-2.jpg')">
+        <img src="images/sfb/object-2.jpg" alt="Объект 2" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-3.jpg')">
+        <img src="images/sfb/object-3.jpg" alt="Объект 3" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-4.jpg')">
+        <img src="images/sfb/object-4.jpg" alt="Объект 4" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-5.jpg')">
+        <img src="images/sfb/object-5.jpg" alt="Объект 5" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-6.jpg')">
+        <img src="images/sfb/object-6.jpg" alt="Объект 6" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-7.jpg')">
+        <img src="images/sfb/object-7.jpg" alt="Объект 7" loading="lazy">
+      </div>
+      <div class="proj-card" onclick="openLightbox('images/sfb/object-8.jpg')">
+        <img src="images/sfb/object-8.jpg" alt="Объект 8" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 REASONS -->
+<section class="sfb-reasons" id="reasons">
+  <div class="container">
+    <h2>6 причин выбрать изделия из СФБ</h2>
+    <div class="reasons-grid">
+      <div class="reason">
+        <div class="reason-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 4 L38 34 H6 Z"/><path d="M6 34 h32"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Лёгкость</h3>
+          <p>В 2–3 раза легче железобетона — снижает нагрузку на конструкции и ускоряет монтаж без тяжёлой техники.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="22" cy="22" r="16"/><path d="M22 10 V22 L30 30"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Долговечность</h3>
+          <p>Срок службы более 50 лет, минимальный уход, стойкость к перепадам температур и механическим нагрузкам.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="8" y="8" width="28" height="28" rx="3"/>
+            <path d="M15 22 h14 M22 15 v14"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Гибкость формы</h3>
+          <p>Производим по проекту заказчика — от типовых балюстрад и колонн до сложных архитектурных деталей.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 6 L36 14 V26 C36 33 22 40 22 40 C22 40 8 33 8 26 V14 Z"/>
+            <path d="M16 22 l4 4 8-8"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Негорючий (НГ)</h3>
+          <p>Класс НГ по ГОСТ 30244-94. Подходит для объектов с повышенными требованиями пожарной безопасности.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M8 36 L20 12 L32 28 L38 18"/>
+            <circle cx="38" cy="18" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Морозостойкость</h3>
+          <p>Выдерживает российский климат: многократные циклы замораживания и оттаивания без трещин.</p>
+        </div>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="10" y="10" width="24" height="18" rx="2"/>
+            <path d="M16 28 V36 M28 28 V36 M12 36 h20"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Сертифицировано</h3>
+          <p>Два сертификата соответствия МФЦС, действительны до марта 2028 года. Полный пакет документов.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section class="sfb-certs" id="certs">
+  <div class="container">
+    <div class="head">
+      <span>Документы</span>
+      <h2>Сертификаты соответствия</h2>
+      <p>Изделия из СФБ сертифицированы в системе МФЦС. Документы действительны до марта 2028 года.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card" onclick="openLightbox('images/sfb/cert-fire.jpg')">
+        <div class="cert-img">
+          <img src="images/sfb/cert-fire.jpg" alt="Сертификат пожарной безопасности">
+        </div>
+        <div class="cert-body">
+          <span class="cert-tag">Действителен до 30.03.2028</span>
+          <h3>Сертификат соответствия — Пожарная безопасность</h3>
+          <p>Класс НГ (негорючий) по ГОСТ 30244-94. Система добровольной сертификации МФЦС.</p>
+          <p class="cert-num">№ РОСС RU.Я2331.04ПВК0.Н00376 · ПБ219568</p>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openLightbox('images/sfb/cert-gost.jpg')">
+        <div class="cert-img">
+          <img src="images/sfb/cert-gost.jpg" alt="Сертификат ГОСТ">
+        </div>
+        <div class="cert-body">
+          <span class="cert-tag">Действителен до 30.03.2028</span>
+          <h3>Сертификат соответствия — ГОСТ 58757-2019</h3>
+          <p>Изделия из СФБ для фасадных декоративных и облицовочных элементов зданий.</p>
+          <p class="cert-num">№ РОСС RU.Я2331.04ПВК0.Н02464 · 0127366</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + FORM -->
+<section class="sfb-cta" id="sfb-form-section">
+  <div class="container sfb-cta-inner">
+    <div class="sfb-cta-left">
+      <h2>Запросите расчёт или образцы изделий из СФБ</h2>
+      <p>Получите консультацию по проекту и стоимости. Опишите задачу — ответим в течение 24 часов.</p>
+    </div>
+    <div class="sfb-cta-right">
+      <form class="sfb-form" id="sfbForm" novalidate>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="text" name="company" placeholder="Компания (необязательно)">
+        </div>
+        <input type="text" name="contact" placeholder="Телефон или e-mail" required>
+        <textarea name="message" placeholder="Опишите проект или задачу..." rows="4"></textarea>
+        <label style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.5);font-size:0.82rem;cursor:pointer;line-height:1.4">
+          <input type="checkbox" name="agree" required style="flex-shrink:0;width:16px;height:16px;accent-color:var(--clay)">
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-lg">Отправить заявку</button>
+        <div class="sfb-form-status" id="sfbFormStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col footer-brand">
+      <span class="logo-text">АКРОТЕРА</span>
+      <p>Архитектурный бетон по технологии «Систром-бетон»</p>
+    </div>
+    <div class="footer-col">
+      <h4>Каталог</h4>
+      <a href="vases.html">Вазоны, скульптуры и МАФ</a>
+      <a href="sfb.html">Изделия из СФБ</a>
+      <a href="thermopanels.html">Термопанели и декор</a>
+      <a href="fireplaces.html">Камины</a>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <a href="tel:+79607127444">+7 960 712-74-44</a>
+      <a href="mailto:89106475555@mail.ru">89106475555@mail.ru</a>
+      <p>г. Тверь, Октябрьский пр-т, 105</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 АКРОТЕРА</span>
+    <span>Производство архитектурного бетона</span>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+(function(){
+  // Smooth anchor scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var target = document.querySelector(a.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+    });
+  });
+
+  // Form
+  document.getElementById('sfbForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var status = document.getElementById('sfbFormStatus');
+    if(!this.checkValidity()){ status.textContent = 'Заполните обязательные поля.'; status.style.color='#e74c3c'; return; }
+    status.textContent = '✓ Заявка отправлена! Свяжемся с вами в течение 24 часов.';
+    status.style.color = '#4caf50';
+    this.reset();
+  });
+
+  // Burger
+  document.getElementById('burgerBtn').addEventListener('click', function(){
+    document.getElementById('mainNav').classList.toggle('is-open');
+  });
+})();
+
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+</script>
+</body>
+</html>

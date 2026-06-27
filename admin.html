@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель — АКРОТЕРА</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f4f0; color: #1a1a1a; min-height: 100vh; }
+
+    /* LOGIN */
+    .login-screen {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; background: #1a1a1a;
+    }
+    .login-box {
+      background: #fff; border-radius: 12px; padding: 40px 36px; width: 340px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+    .login-logo { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.12em; margin-bottom: 28px; color: #1a1a1a; }
+    .login-box h2 { font-size: 1.3rem; margin-bottom: 24px; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .field label { font-size: 0.8rem; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }
+    .field input { border: 1.5px solid #ddd; border-radius: 8px; padding: 10px 14px; font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+    .field input:focus { border-color: #B5562F; }
+    .btn-login { width: 100%; background: #B5562F; color: #fff; border: none; border-radius: 8px; padding: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 8px; transition: opacity 0.2s; }
+    .btn-login:hover { opacity: 0.88; }
+    .login-error { color: #c0392b; font-size: 0.85rem; margin-top: 10px; display: none; }
+
+    /* LAYOUT */
+    .admin-layout { display: none; min-height: 100vh; }
+    .admin-layout.is-visible { display: flex; }
+    .sidebar {
+      width: 240px; background: #1a1a1a; color: #fff; padding: 28px 0;
+      display: flex; flex-direction: column; flex-shrink: 0; min-height: 100vh;
+    }
+    .sidebar-logo { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.12em; padding: 0 24px 28px; border-bottom: 1px solid #333; }
+    .sidebar-logo span { display: block; font-size: 0.7rem; font-weight: 400; color: #888; margin-top: 4px; letter-spacing: 0; }
+    .sidebar-nav { padding: 20px 0; flex: 1; }
+    .sidebar-nav button {
+      display: flex; align-items: center; gap: 10px; width: 100%; padding: 11px 24px;
+      background: none; border: none; color: #aaa; font-size: 0.9rem; cursor: pointer;
+      text-align: left; transition: all 0.15s;
+    }
+    .sidebar-nav button:hover { background: #2a2a2a; color: #fff; }
+    .sidebar-nav button.active { background: #B5562F; color: #fff; }
+    .sidebar-nav .icon { width: 18px; text-align: center; }
+    .sidebar-footer { padding: 16px 24px; border-top: 1px solid #333; }
+    .btn-logout { background: none; border: 1px solid #444; color: #888; border-radius: 6px; padding: 8px 14px; cursor: pointer; font-size: 0.82rem; transition: all 0.15s; }
+    .btn-logout:hover { border-color: #888; color: #fff; }
+
+    .main { flex: 1; padding: 32px 36px; overflow-y: auto; }
+    .page-head { margin-bottom: 28px; }
+    .page-head h1 { font-size: 1.5rem; font-weight: 700; }
+    .page-head p { color: #666; font-size: 0.88rem; margin-top: 4px; }
+
+    /* TABS */
+    .admin-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+    .admin-tab { background: #fff; border: 1.5px solid #ddd; border-radius: 20px; padding: 7px 16px; font-size: 0.85rem; cursor: pointer; transition: all 0.15s; }
+    .admin-tab:hover { border-color: #B5562F; color: #B5562F; }
+    .admin-tab.active { background: #B5562F; border-color: #B5562F; color: #fff; font-weight: 600; }
+
+    /* PRODUCT TABLE */
+    .product-table { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+    .product-table table { width: 100%; border-collapse: collapse; }
+    .product-table th { background: #f8f7f4; padding: 12px 16px; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #666; border-bottom: 1px solid #eee; font-weight: 600; }
+    .product-table td { padding: 12px 16px; border-bottom: 1px solid #f0f0ee; font-size: 0.88rem; vertical-align: middle; }
+    .product-table tr:last-child td { border-bottom: none; }
+    .product-table tr:hover td { background: #faf9f7; }
+
+    /* INLINE EDIT */
+    .editable-cell { position: relative; }
+    .editable-cell input, .editable-cell textarea {
+      width: 100%; border: 1.5px solid #B5562F; border-radius: 6px;
+      padding: 6px 10px; font-size: 0.88rem; outline: none; background: #fff9f7;
+      font-family: inherit;
+    }
+    .editable-cell textarea { resize: vertical; min-height: 56px; }
+    .edit-btn {
+      background: none; border: 1px solid #ddd; border-radius: 6px;
+      padding: 4px 10px; font-size: 0.78rem; cursor: pointer; color: #666;
+      transition: all 0.15s; white-space: nowrap;
+    }
+    .edit-btn:hover { border-color: #B5562F; color: #B5562F; }
+    .save-btn {
+      background: #B5562F; border: none; border-radius: 6px;
+      padding: 5px 12px; font-size: 0.78rem; cursor: pointer; color: #fff;
+      margin-right: 6px; transition: opacity 0.15s;
+    }
+    .save-btn:hover { opacity: 0.85; }
+    .cancel-btn {
+      background: none; border: 1px solid #ddd; border-radius: 6px;
+      padding: 4px 10px; font-size: 0.78rem; cursor: pointer; color: #666;
+    }
+    .price-badge {
+      background: #f0f7f0; color: #2a6e2a; border-radius: 6px;
+      padding: 3px 10px; font-size: 0.82rem; font-weight: 600; display: inline-block;
+    }
+    .name-text { font-weight: 500; }
+    .dim-text { color: #888; font-size: 0.82rem; }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 28px; right: 28px; background: #1a1a1a; color: #fff;
+      border-radius: 10px; padding: 13px 22px; font-size: 0.88rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2); opacity: 0;
+      transform: translateY(10px); transition: all 0.25s; pointer-events: none; z-index: 999;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.success::before { content: "✓  "; color: #4caf50; }
+
+    /* SAVE BAR */
+    .save-bar {
+      position: fixed; bottom: 0; left: 240px; right: 0;
+      background: #fff; border-top: 1px solid #e0e0e0;
+      padding: 14px 36px; display: none; align-items: center; justify-content: space-between;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.07); z-index: 100;
+    }
+    .save-bar.visible { display: flex; }
+    .save-bar p { font-size: 0.88rem; color: #666; }
+    .save-bar strong { color: #B5562F; }
+    .btn-save-all {
+      background: #B5562F; color: #fff; border: none; border-radius: 8px;
+      padding: 10px 24px; font-size: 0.9rem; font-weight: 600; cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-save-all:hover { opacity: 0.88; }
+
+    /* INFO SECTION */
+    .info-card { background: #fff; border-radius: 12px; padding: 24px 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); margin-bottom: 20px; }
+    .info-card h3 { font-size: 1rem; margin-bottom: 14px; }
+    .info-row { display: flex; gap: 16px; margin-bottom: 12px; align-items: flex-start; }
+    .info-row label { width: 160px; flex-shrink: 0; font-size: 0.8rem; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 8px; }
+    .info-row input, .info-row textarea {
+      flex: 1; border: 1.5px solid #ddd; border-radius: 8px; padding: 8px 12px;
+      font-size: 0.9rem; outline: none; transition: border-color 0.2s; font-family: inherit;
+    }
+    .info-row input:focus, .info-row textarea:focus { border-color: #B5562F; }
+    .info-row textarea { resize: vertical; min-height: 72px; }
+    .btn-save-info { background: #B5562F; color: #fff; border: none; border-radius: 8px; padding: 10px 22px; font-size: 0.88rem; font-weight: 600; cursor: pointer; }
+    .section-divider { border: none; border-top: 1px solid #eee; margin: 20px 0; }
+
+    .empty-state { text-align: center; padding: 60px 20px; color: #aaa; }
+    .empty-state svg { width: 48px; height: 48px; margin-bottom: 16px; opacity: 0.3; }
+  </style>
+</head>
+<body>
+
+<!-- ===== LOGIN ===== -->
+<div class="login-screen" id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">▲ АКРОТЕРА</div>
+    <h2>Вход в панель управления</h2>
+    <div class="field">
+      <label>Логин</label>
+      <input type="text" id="loginUser" placeholder="admin" autocomplete="username">
+    </div>
+    <div class="field">
+      <label>Пароль</label>
+      <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <button class="btn-login" onclick="doLogin()">Войти</button>
+    <div class="login-error" id="loginError">Неверный логин или пароль</div>
+  </div>
+</div>
+
+<!-- ===== ADMIN LAYOUT ===== -->
+<div class="admin-layout" id="adminLayout">
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      ▲ АКРОТЕРА
+      <span>Панель управления</span>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="active" onclick="showSection('products')" id="nav-products">
+        <span class="icon">📦</span> Товары и цены
+      </button>
+      <button onclick="showSection('info')" id="nav-info">
+        <span class="icon">ℹ️</span> Контакты и тексты
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="btn-logout" onclick="doLogout()">Выйти</button>
+    </div>
+  </aside>
+
+  <div style="flex:1; display:flex; flex-direction:column;">
+    <main class="main" id="mainContent">
+
+      <!-- PRODUCTS SECTION -->
+      <div id="section-products">
+        <div class="page-head">
+          <h1>Товары и цены</h1>
+          <p>Нажмите на цену или название, чтобы отредактировать. Изменения сохраняются кнопкой ниже.</p>
+        </div>
+
+        <div class="admin-tabs" id="catTabsAdmin"></div>
+
+        <div class="product-table">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:32%">Название</th>
+                <th style="width:22%">Размеры / Серия</th>
+                <th style="width:18%">Цена</th>
+                <th style="width:28%">Действие</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- INFO SECTION -->
+      <div id="section-info" style="display:none">
+        <div class="page-head">
+          <h1>Контакты и тексты</h1>
+          <p>Редактируйте основную информацию на сайте.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Контактные данные</h3>
+          <div class="info-row">
+            <label>Телефон</label>
+            <input type="text" id="info-phone" placeholder="+7 960 712-74-44">
+          </div>
+          <div class="info-row">
+            <label>Email</label>
+            <input type="email" id="info-email" placeholder="89106475555@mail.ru">
+          </div>
+          <div class="info-row">
+            <label>Адрес</label>
+            <input type="text" id="info-address" placeholder="г. Тверь, Октябрьский пр-т, 105">
+          </div>
+          <hr class="section-divider">
+          <h3>Главная страница</h3>
+          <div class="info-row">
+            <label>Заголовок Hero</label>
+            <input type="text" id="info-hero-title" placeholder="Архитектурный бетон для фасада">
+          </div>
+          <div class="info-row">
+            <label>Подзаголовок Hero</label>
+            <textarea id="info-hero-sub" placeholder="Вазоны, скульптуры, термопанели..."></textarea>
+          </div>
+          <div style="margin-top:16px">
+            <button class="btn-save-info" onclick="saveInfo()">Сохранить контакты</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <div class="save-bar" id="saveBar">
+      <p>Есть несохранённые изменения — <strong id="changeCount">0</strong></p>
+      <button class="btn-save-all" onclick="saveAllChanges()">💾 Сохранить все изменения</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== AUTH =====
+const ADMIN_USER = "akrotera";
+const ADMIN_PASS = "akrotera2026";
+
+function doLogin() {
+  const u = document.getElementById("loginUser").value;
+  const p = document.getElementById("loginPass").value;
+  if (u === ADMIN_USER && p === ADMIN_PASS) {
+    document.getElementById("loginScreen").style.display = "none";
+    document.getElementById("adminLayout").classList.add("is-visible");
+    loadAdminData();
+  } else {
+    document.getElementById("loginError").style.display = "block";
+  }
+}
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && document.getElementById("loginScreen").style.display !== "none") doLogin();
+});
+
+function doLogout() {
+  document.getElementById("loginScreen").style.display = "flex";
+  document.getElementById("adminLayout").classList.remove("is-visible");
+}
+
+// ===== DATA =====
+let DATA = null;
+let pendingChanges = {};
+let activeCatAdmin = null;
+
+async function loadAdminData() {
+  const res = await fetch("data/products.json");
+  DATA = await res.json();
+  buildCatTabs();
+  if (DATA.categories.length) {
+    activeCatAdmin = DATA.categories[0].id;
+    renderProductTable(activeCatAdmin);
+  }
+}
+
+// ===== SECTION NAV =====
+function showSection(name) {
+  ["products","info"].forEach(s => {
+    document.getElementById("section-" + s).style.display = s === name ? "block" : "none";
+    document.getElementById("nav-" + s).classList.toggle("active", s === name);
+  });
+}
+
+// ===== CAT TABS =====
+function buildCatTabs() {
+  const container = document.getElementById("catTabsAdmin");
+  container.innerHTML = "";
+  DATA.categories.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = "admin-tab" + (cat.id === activeCatAdmin ? " active" : "");
+    btn.textContent = cat.title;
+    btn.onclick = () => {
+      activeCatAdmin = cat.id;
+      container.querySelectorAll(".admin-tab").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderProductTable(cat.id);
+    };
+    container.appendChild(btn);
+  });
+}
+
+// ===== PRODUCT TABLE =====
+function renderProductTable(catId) {
+  const cat = DATA.categories.find(c => c.id === catId);
+  const tbody = document.getElementById("productTableBody");
+  if (!cat || !cat.products || !cat.products.length) {
+    tbody.innerHTML = `<tr><td colspan="4"><div class="empty-state"><p>В этой категории нет товаров с ценами</p></div></td></tr>`;
+    return;
+  }
+  tbody.innerHTML = "";
+  cat.products.forEach(product => {
+    const tr = document.createElement("tr");
+    tr.id = "row-" + product.id;
+    tr.innerHTML = `
+      <td>
+        <div class="editable-cell" id="name-cell-${product.id}">
+          <span class="name-text">${esc(product.name)}</span>
+        </div>
+      </td>
+      <td>
+        <span class="dim-text">${esc(product.dimensions || "—")}</span>
+      </td>
+      <td>
+        <div class="editable-cell" id="price-cell-${product.id}">
+          <span class="price-badge">${esc(product.price_label || (product.price ? product.price + " ₽" : "По запросу"))}</span>
+        </div>
+      </td>
+      <td>
+        <button class="edit-btn" onclick="startEdit('${product.id}', '${catId}')">✏️ Редактировать</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function startEdit(productId, catId) {
+  const cat = DATA.categories.find(c => c.id === catId);
+  const product = cat.products.find(p => p.id === productId);
+
+  const nameCell = document.getElementById("name-cell-" + productId);
+  const priceCell = document.getElementById("price-cell-" + productId);
+
+  nameCell.innerHTML = `<input type="text" id="name-input-${productId}" value="${esc(product.name)}">`;
+  priceCell.innerHTML = `<input type="text" id="price-input-${productId}" value="${esc(product.price_label || '')}">`;
+
+  const row = document.getElementById("row-" + productId);
+  row.querySelector("td:last-child").innerHTML = `
+    <button class="save-btn" onclick="saveEdit('${productId}', '${catId}')">✓ Сохранить</button>
+    <button class="cancel-btn" onclick="renderProductTable('${catId}')">Отмена</button>
+  `;
+}
+
+function saveEdit(productId, catId) {
+  const cat = DATA.categories.find(c => c.id === catId);
+  const product = cat.products.find(p => p.id === productId);
+
+  const newName = document.getElementById("name-input-" + productId).value.trim();
+  const newPrice = document.getElementById("price-input-" + productId).value.trim();
+
+  if (newName) product.name = newName;
+  if (newPrice) product.price_label = newPrice;
+
+  pendingChanges[productId] = true;
+  updateSaveBar();
+  renderProductTable(catId);
+  showToast("Изменение сохранено в памяти");
+}
+
+// ===== SAVE BAR =====
+function updateSaveBar() {
+  const count = Object.keys(pendingChanges).length;
+  const bar = document.getElementById("saveBar");
+  document.getElementById("changeCount").textContent = count;
+  bar.classList.toggle("visible", count > 0);
+}
+
+function saveAllChanges() {
+  const json = JSON.stringify(DATA, null, 2);
+  const blob = new Blob([json], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "products.json";
+  a.click();
+  pendingChanges = {};
+  updateSaveBar();
+  showToast("✓ Файл products.json скачан — загрузите его в папку data/ на сервере");
+}
+
+// ===== INFO =====
+function saveInfo() {
+  showToast("✓ Сохранено (для применения обновите соответствующие файлы)");
+}
+
+// ===== UTILS =====
+function esc(str) {
+  if (!str) return "";
+  return String(str).replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show", "success");
+  setTimeout(() => t.classList.remove("show"), 3000);
+}
+</script>
+</body>
+</html>

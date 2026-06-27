@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "decor-050кв1",
+    "name": "Карниз венчающий 050КВ1",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "050КВ1",
+    "dimensions": "50х145 мм",
+    "weight": null,
+    "price": 480,
+    "price_label": "от 200 ₽/п.м.",
+    "price_plain": 200,
+    "price_coated": 480,
+    "colors": [],
+    "images": [
+      "images/decor/cards/050KV1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-050кв2",
+    "name": "Карниз венчающий 050КВ2",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "050КВ2",
+    "dimensions": "50х120 мм",
+    "weight": null,
+    "price": 490,
+    "price_label": "от 170 ₽/п.м.",
+    "price_plain": 170,
+    "price_coated": 490,
+    "colors": [],
+    "images": [
+      "images/decor/cards/050KV2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-125кв1",
+    "name": "Карниз венчающий 125КВ1",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "125КВ1",
+    "dimensions": "125х650 мм",
+    "weight": null,
+    "price": 2400,
+    "price_label": "от 1 530 ₽/п.м.",
+    "price_plain": 1530,
+    "price_coated": 2400,
+    "colors": [],
+    "images": [
+      "images/decor/cards/125KV1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180кв2",
+    "name": "Карниз венчающий 180КВ2",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "180КВ2",
+    "dimensions": "180х80 мм",
+    "weight": null,
+    "price": 710,
+    "price_label": "от 360 ₽/п.м.",
+    "price_plain": 360,
+    "price_coated": 710,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180KV2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-200кв3",
+    "name": "Карниз венчающий 200КВ3",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "200КВ3",
+    "dimensions": "200х190 мм",
+    "weight": null,
+    "price": 1030,
+    "price_label": "от 720 ₽/п.м.",
+    "price_plain": 720,
+    "price_coated": 1030,
+    "colors": [],
+    "images": [
+      "images/decor/cards/200KV3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-250кв1",
+    "name": "Карниз венчающий 250КВ1",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "250КВ1",
+    "dimensions": "250х190 мм",
+    "weight": null,
+    "price": 1200,
+    "price_label": "от 890 ₽/п.м.",
+    "price_plain": 890,
+    "price_coated": 1200,
+    "colors": [],
+    "images": [
+      "images/decor/cards/250KV1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-250кв2",
+    "name": "Карниз венчающий 250КВ2",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "250КВ2",
+    "dimensions": "250х100 мм",
+    "weight": null,
+    "price": 820,
+    "price_label": "от 500 ₽/п.м.",
+    "price_plain": 500,
+    "price_coated": 820,
+    "colors": [],
+    "images": [
+      "images/decor/cards/250KV2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-250кв3",
+    "name": "Карниз венчающий 250КВ3",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "250КВ3",
+    "dimensions": "250х110 мм",
+    "weight": null,
+    "price": 840,
+    "price_label": "от 540 ₽/п.м.",
+    "price_plain": 540,
+    "price_coated": 840,
+    "colors": [],
+    "images": [
+      "images/decor/cards/250KV3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-325кв1",
+    "name": "Карниз венчающий 325КВ1",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "325КВ1",
+    "dimensions": "325х500 мм",
+    "weight": null,
+    "price": 3600,
+    "price_label": "от 2 800 ₽/п.м.",
+    "price_plain": 2800,
+    "price_coated": 3600,
+    "colors": [],
+    "images": [
+      "images/decor/cards/325KV1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-370кв1",
+    "name": "Карниз венчающий 370КВ1",
+    "type": "cornice-top",
+    "type_title": "Карниз венчающий",
+    "article": "370КВ1",
+    "dimensions": "370х180 мм",
+    "weight": null,
+    "price": 1600,
+    "price_label": "от 1 200 ₽/п.м.",
+    "price_plain": 1200,
+    "price_coated": 1600,
+    "colors": [],
+    "images": [
+      "images/decor/cards/370KV1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-050ск1",
+    "name": "Карниз средний межэтажный 050СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "050СК1",
+    "dimensions": "50х50 мм",
+    "weight": null,
+    "price": 420,
+    "price_label": "от 150 ₽/п.м.",
+    "price_plain": 150,
+    "price_coated": 420,
+    "colors": [],
+    "images": [
+      "images/decor/cards/050SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-110ск1",
+    "name": "Карниз средний межэтажный 110СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "110СК1",
+    "dimensions": "109х61 мм",
+    "weight": null,
+    "price": 470,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 470,
+    "colors": [],
+    "images": [
+      "images/decor/cards/110SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120ск1",
+    "name": "Карниз средний межэтажный 120СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "120СК1",
+    "dimensions": "120х40 мм",
+    "weight": null,
+    "price": 430,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 430,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120ск2",
+    "name": "Карниз средний межэтажный 120СК2",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "120СК2",
+    "dimensions": "120х35 мм",
+    "weight": null,
+    "price": 345,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 345,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120SK2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120ск4",
+    "name": "Карниз средний межэтажный 120СК4",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "120СК4",
+    "dimensions": "120х40 мм",
+    "weight": null,
+    "price": 430,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 430,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120SK4.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-135ск1",
+    "name": "Карниз средний межэтажный 135СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "135СК1",
+    "dimensions": "135х95 мм",
+    "weight": null,
+    "price": 630,
+    "price_label": "от 320 ₽/п.м.",
+    "price_plain": 320,
+    "price_coated": 630,
+    "colors": [],
+    "images": [
+      "images/decor/cards/135SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-145ск1",
+    "name": "Карниз средний межэтажный 145СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "145СК1",
+    "dimensions": "145х40 мм",
+    "weight": null,
+    "price": 450,
+    "price_label": "от 180 ₽/п.м.",
+    "price_plain": 180,
+    "price_coated": 450,
+    "colors": [],
+    "images": [
+      "images/decor/cards/145SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150ск1",
+    "name": "Карниз средний межэтажный 150СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "150СК1",
+    "dimensions": "150х75 мм",
+    "weight": null,
+    "price": 590,
+    "price_label": "от 300 ₽/п.м.",
+    "price_plain": 300,
+    "price_coated": 590,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150ск2",
+    "name": "Карниз средний межэтажный 150СК2",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "150СК2",
+    "dimensions": "150х45 мм",
+    "weight": null,
+    "price": 480,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 480,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150SK2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150ск3",
+    "name": "Карниз средний межэтажный 150СК3",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "150СК3",
+    "dimensions": "150х80 мм",
+    "weight": null,
+    "price": 610,
+    "price_label": "от 300 ₽/п.м.",
+    "price_plain": 300,
+    "price_coated": 610,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150SK3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-160ск2",
+    "name": "Карниз средний межэтажный 160СК2",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "160СК2",
+    "dimensions": "160х100 мм",
+    "weight": null,
+    "price": 780,
+    "price_label": "от 390 ₽/п.м.",
+    "price_plain": 390,
+    "price_coated": 780,
+    "colors": [],
+    "images": [
+      "images/decor/cards/160SK2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-160ск3",
+    "name": "Карниз средний межэтажный 160СК3",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "160СК3",
+    "dimensions": "160х65 мм",
+    "weight": null,
+    "price": 630,
+    "price_label": "от 280 ₽/п.м.",
+    "price_plain": 280,
+    "price_coated": 630,
+    "colors": [],
+    "images": [
+      "images/decor/cards/160SK3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180ск1",
+    "name": "Карниз средний межэтажный 180СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "180СК1",
+    "dimensions": "180х90 мм",
+    "weight": null,
+    "price": 690,
+    "price_label": "от 460 ₽/п.м.",
+    "price_plain": 460,
+    "price_coated": 690,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-210ск1",
+    "name": "Карниз средний межэтажный 210СК1",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "210СК1",
+    "dimensions": "210х70 мм",
+    "weight": null,
+    "price": 610,
+    "price_label": "от 350 ₽/п.м.",
+    "price_plain": 350,
+    "price_coated": 610,
+    "colors": [],
+    "images": [
+      "images/decor/cards/210SK1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-225ск3",
+    "name": "Карниз средний межэтажный 225СК3",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "225СК3",
+    "dimensions": "225х100 мм",
+    "weight": null,
+    "price": 760,
+    "price_label": "от 550 ₽/п.м.",
+    "price_plain": 550,
+    "price_coated": 760,
+    "colors": [],
+    "images": [
+      "images/decor/cards/225SK3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-300ск2",
+    "name": "Карниз средний межэтажный 300СК2",
+    "type": "cornice-mid",
+    "type_title": "Карниз межэтажный",
+    "article": "300СК2",
+    "dimensions": "300х100 мм",
+    "weight": null,
+    "price": 960,
+    "price_label": "от 610 ₽/п.м.",
+    "price_plain": 610,
+    "price_coated": 960,
+    "colors": [],
+    "images": [
+      "images/decor/cards/300SK2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-050кн1",
+    "name": "Карниз нижний 050КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "050КН1",
+    "dimensions": "50х50 мм",
+    "weight": null,
+    "price": 420,
+    "price_label": "от 150 ₽/п.м.",
+    "price_plain": 150,
+    "price_coated": 420,
+    "colors": [],
+    "images": [
+      "images/decor/cards/050KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120кн1",
+    "name": "Карниз нижний 120КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "120КН1",
+    "dimensions": "120х40 мм",
+    "weight": null,
+    "price": 430,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 430,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120кн2",
+    "name": "Карниз нижний 120КН2",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "120КН2",
+    "dimensions": "120х35 мм",
+    "weight": null,
+    "price": 430,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 430,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120KN2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120кн4",
+    "name": "Карниз нижний 120КН4",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "120КН4",
+    "dimensions": "120х40 мм",
+    "weight": null,
+    "price": 430,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 430,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120KN4.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-135кн1",
+    "name": "Карниз нижний 135КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "135КН1",
+    "dimensions": "135х95 мм",
+    "weight": null,
+    "price": 630,
+    "price_label": "от 320 ₽/п.м.",
+    "price_plain": 320,
+    "price_coated": 630,
+    "colors": [],
+    "images": [
+      "images/decor/cards/135KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-145кн1",
+    "name": "Карниз нижний 145КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "145КН1",
+    "dimensions": "145х40 мм",
+    "weight": null,
+    "price": 440,
+    "price_label": "от 180 ₽/п.м.",
+    "price_plain": 180,
+    "price_coated": 440,
+    "colors": [],
+    "images": [
+      "images/decor/cards/145KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-300кн1",
+    "name": "Карниз нижний 300КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "300КН1",
+    "dimensions": "300х100 мм",
+    "weight": null,
+    "price": 950,
+    "price_label": "от 610 ₽/п.м.",
+    "price_plain": 610,
+    "price_coated": 950,
+    "colors": [],
+    "images": [
+      "images/decor/cards/300KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн4",
+    "name": "Карниз нижний 150КН4",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН4",
+    "dimensions": "150х30 мм",
+    "weight": null,
+    "price": 420,
+    "price_label": "от 160 ₽/п.м.",
+    "price_plain": 160,
+    "price_coated": 420,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN4.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн5",
+    "name": "Карниз нижний 150КН5",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН5",
+    "dimensions": "150х40 мм",
+    "weight": null,
+    "price": 450,
+    "price_label": "от 180 ₽/п.м.",
+    "price_plain": 180,
+    "price_coated": 450,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN5.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн6",
+    "name": "Карниз нижний 150КН6",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН6",
+    "dimensions": "150х60 мм",
+    "weight": null,
+    "price": 490,
+    "price_label": "от 250 ₽/п.м.",
+    "price_plain": 250,
+    "price_coated": 490,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN6.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн8",
+    "name": "Карниз нижний 150КН8",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН8",
+    "dimensions": "150х30 мм",
+    "weight": null,
+    "price": 460,
+    "price_label": "от 200 ₽/п.м.",
+    "price_plain": 200,
+    "price_coated": 460,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN8.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн9",
+    "name": "Карниз нижний 150КН9",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН9",
+    "dimensions": "150х75 мм",
+    "weight": null,
+    "price": 560,
+    "price_label": "от 300 ₽/п.м.",
+    "price_plain": 300,
+    "price_coated": 560,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN9.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн10",
+    "name": "Карниз нижний 150КН10",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН10",
+    "dimensions": "150х45 мм",
+    "weight": null,
+    "price": 470,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 470,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN10.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150кн11",
+    "name": "Карниз нижний 150КН11",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "150КН11",
+    "dimensions": "150х80 мм",
+    "weight": null,
+    "price": 600,
+    "price_label": "от 330 ₽/п.м.",
+    "price_plain": 330,
+    "price_coated": 600,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150KN11.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-152кн12",
+    "name": "Карниз нижний 152КН12",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "152КН12",
+    "dimensions": "152х60 мм",
+    "weight": null,
+    "price": 500,
+    "price_label": "от 300 ₽/п.м.",
+    "price_plain": 300,
+    "price_coated": 500,
+    "colors": [],
+    "images": [
+      "images/decor/cards/152KN12.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-160кн2",
+    "name": "Карниз нижний 160КН2",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "160КН2",
+    "dimensions": "160х100 мм",
+    "weight": null,
+    "price": 745,
+    "price_label": "от 390 ₽/п.м.",
+    "price_plain": 390,
+    "price_coated": 745,
+    "colors": [],
+    "images": [
+      "images/decor/cards/160KN2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-160кн3",
+    "name": "Карниз нижний 160КН3",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "160КН3",
+    "dimensions": "160х65 мм",
+    "weight": null,
+    "price": 630,
+    "price_label": "от 280 ₽/п.м.",
+    "price_plain": 280,
+    "price_coated": 630,
+    "colors": [],
+    "images": [
+      "images/decor/cards/160KN3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180кн11",
+    "name": "Карниз нижний 180КН11",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "180КН11",
+    "dimensions": "180х50 мм",
+    "weight": null,
+    "price": 490,
+    "price_label": "от 220 ₽/п.м.",
+    "price_plain": 220,
+    "price_coated": 490,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180KN11.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180кн2",
+    "name": "Карниз нижний 180КН2",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "180КН2",
+    "dimensions": "180х90 мм",
+    "weight": null,
+    "price": 690,
+    "price_label": "от 460 ₽/п.м.",
+    "price_plain": 460,
+    "price_coated": 690,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180KN2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-210кн1",
+    "name": "Карниз нижний 210КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "210КН1",
+    "dimensions": "210х70 мм",
+    "weight": null,
+    "price": 590,
+    "price_label": "от 360 ₽/п.м.",
+    "price_plain": 360,
+    "price_coated": 590,
+    "colors": [],
+    "images": [
+      "images/decor/cards/210KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-220кн1",
+    "name": "Карниз нижний 220КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "220КН1",
+    "dimensions": "220х85 мм",
+    "weight": null,
+    "price": 700,
+    "price_label": "от 440 ₽/п.м.",
+    "price_plain": 440,
+    "price_coated": 700,
+    "colors": [],
+    "images": [
+      "images/decor/cards/220KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-225кн2",
+    "name": "Карниз нижний 225КН2",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "225КН2",
+    "dimensions": "225х100 мм",
+    "weight": null,
+    "price": 760,
+    "price_label": "от 550 ₽/п.м.",
+    "price_plain": 550,
+    "price_coated": 760,
+    "colors": [],
+    "images": [
+      "images/decor/cards/225KN2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-280кн1",
+    "name": "Карниз нижний 280КН1",
+    "type": "cornice-bottom",
+    "type_title": "Карниз нижний",
+    "article": "280КН1",
+    "dimensions": "280х80 мм",
+    "weight": null,
+    "price": 795,
+    "price_label": "от 470 ₽/п.м.",
+    "price_plain": 470,
+    "price_coated": 795,
+    "colors": [],
+    "images": [
+      "images/decor/cards/280KN1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-095н1",
+    "name": "Наличник 095Н1",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "095Н1",
+    "dimensions": "95х30 мм",
+    "weight": null,
+    "price": 380,
+    "price_label": "от 130 ₽/п.м.",
+    "price_plain": 130,
+    "price_coated": 380,
+    "colors": [],
+    "images": [
+      "images/decor/cards/095N1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120н1",
+    "name": "Наличник 120Н1",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "120Н1",
+    "dimensions": "120х40 мм",
+    "weight": null,
+    "price": 420,
+    "price_label": "от 170 ₽/п.м.",
+    "price_plain": 170,
+    "price_coated": 420,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120N1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120н2",
+    "name": "Наличник 120Н2",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "120Н2",
+    "dimensions": "120х35 мм",
+    "weight": null,
+    "price": 280,
+    "price_label": "от 170 ₽/п.м.",
+    "price_plain": 170,
+    "price_coated": 280,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120N2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-120н4",
+    "name": "Наличник 120Н4",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "120Н4",
+    "dimensions": "120х40 мм",
+    "weight": null,
+    "price": 430,
+    "price_label": "от 170 ₽/п.м.",
+    "price_plain": 170,
+    "price_coated": 430,
+    "colors": [],
+    "images": [
+      "images/decor/cards/120N4.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-140н2",
+    "name": "Профиль 140Н2",
+    "type": "profile",
+    "type_title": "Профиль",
+    "article": "140Н2",
+    "dimensions": "140х50 мм",
+    "weight": null,
+    "price": 470,
+    "price_label": "от 190 ₽/п.м.",
+    "price_plain": 190,
+    "price_coated": 470,
+    "colors": [],
+    "images": [
+      "images/decor/cards/140N2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-220н1",
+    "name": "Наличник 220Н1",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "220Н1",
+    "dimensions": "220х85 мм",
+    "weight": null,
+    "price": 700,
+    "price_label": "от 440 ₽/п.м.",
+    "price_plain": 440,
+    "price_coated": 700,
+    "colors": [],
+    "images": [
+      "images/decor/cards/220N1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-145н2",
+    "name": "Наличник 145Н2",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "145Н2",
+    "dimensions": "145х40 мм",
+    "weight": null,
+    "price": 440,
+    "price_label": "от 170 ₽/п.м.",
+    "price_plain": 170,
+    "price_coated": 440,
+    "colors": [],
+    "images": [
+      "images/decor/cards/145N2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150н4",
+    "name": "Наличник 150Н4",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "150Н4",
+    "dimensions": "150х30 мм",
+    "weight": null,
+    "price": 460,
+    "price_label": "от 200 ₽/п.м.",
+    "price_plain": 200,
+    "price_coated": 460,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150N4.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150н5",
+    "name": "Наличник 150Н5",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "150Н5",
+    "dimensions": "150х40 мм",
+    "weight": null,
+    "price": 440,
+    "price_label": "от 230 ₽/п.м.",
+    "price_plain": 230,
+    "price_coated": 440,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150N5.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150н6",
+    "name": "Наличник 150Н6",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "150Н6",
+    "dimensions": "150х60 мм",
+    "weight": null,
+    "price": 490,
+    "price_label": "от 250 ₽/п.м.",
+    "price_plain": 250,
+    "price_coated": 490,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150N6.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-150н8",
+    "name": "Наличник 150Н8",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "150Н8",
+    "dimensions": "150х30 мм",
+    "weight": null,
+    "price": 420,
+    "price_label": "от 200 ₽/п.м.",
+    "price_plain": 200,
+    "price_coated": 420,
+    "colors": [],
+    "images": [
+      "images/decor/cards/150N8.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-152н1",
+    "name": "Наличник 152Н1",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "152Н1",
+    "dimensions": "152х60 мм",
+    "weight": null,
+    "price": 500,
+    "price_label": "от 240 ₽/п.м.",
+    "price_plain": 240,
+    "price_coated": 500,
+    "colors": [],
+    "images": [
+      "images/decor/cards/152N1.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180н2",
+    "name": "Наличник 180Н2",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "180Н2",
+    "dimensions": "180х50 мм",
+    "weight": null,
+    "price": 450,
+    "price_label": "от 300 ₽/п.м.",
+    "price_plain": 300,
+    "price_coated": 450,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180N2.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180н3",
+    "name": "Наличник 180Н3",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "180Н3",
+    "dimensions": "180х30 мм",
+    "weight": null,
+    "price": 520,
+    "price_label": "от 250 ₽/п.м.",
+    "price_plain": 250,
+    "price_coated": 520,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180N3.jpg"
+    ],
+    "is_full_card": true
+  },
+  {
+    "id": "decor-180н4",
+    "name": "Наличник 180Н4",
+    "type": "nalichnik",
+    "type_title": "Наличник",
+    "article": "180Н4",
+    "dimensions": "180х50 мм",
+    "weight": null,
+    "price": 490,
+    "price_label": "от 220 ₽/п.м.",
+    "price_plain": 220,
+    "price_coated": 490,
+    "colors": [],
+    "images": [
+      "images/decor/cards/180N4.jpg"
+    ],
+    "is_full_card": true
+  }
+]
